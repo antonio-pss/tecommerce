@@ -22,7 +22,7 @@ class ModelBase(models.Model):
     )
 
     modified_at = models.DateTimeField(
-        db_column='dt_created_at',
+        db_column='dt_modified_at',
         auto_now=True,
         null=False
     )
@@ -87,8 +87,8 @@ class Sale(ModelBase):
         max_length=255,
     )
 
-    id_client = models.ForeignKey(Client, on_delete=models.PROTECT)
+    id_client = models.ForeignKey(Client, db_column='id_client', on_delete=models.PROTECT, null=False)
 
-    id_product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    id_product = models.ForeignKey(Product, db_column='id_product', on_delete=models.PROTECT, null=False)
 
-    id_employee = models.ForeignKey(Employee, on_delete=models.PROTECT)
+    id_employee = models.ForeignKey(Employee, db_column='id_employee', on_delete=models.PROTECT, null=False)
