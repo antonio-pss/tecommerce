@@ -57,7 +57,8 @@ class Client(ModelBase):
 class Product(ModelBase):
     description = models.CharField(
         db_column='tx_description',
-        null=False
+        null=False,
+        max_length=200,
     )
 
     quantity = models.IntegerField(
