@@ -20,4 +20,4 @@ class EmployeeSerializer(serializers.ModelSerializer):
 class SaleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sale
-        fields = ['id', 'client', 'product', 'employee', 'nrf']
+        fields = ['id', 'id_client', 'id_product', 'id_employee', 'nrf']
