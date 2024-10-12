@@ -2,8 +2,7 @@ from django_filters import rest_framework as filters
 from teste.models import Client, Product, Employee, Sale
 
 # Search Filters
-LIKE = 'icontains'
-UNCENT = 'unaccent'
+LIKE = 'unaccent__icontains'
 EQUALS = 'exact'
 STARTS_WITH = 'startswith'
 IN = 'in'
