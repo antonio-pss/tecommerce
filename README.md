@@ -1,1 +1,1 @@
-Projeto feito durante as aulas Frameworks para Backd-end. Onde usamos Django entre outras bibliotecas para aprendermos como funciona uma API. 
+Projeto feito durante as aulas Frameworks para Backd-end do curso Técnico em Desevolvimento para Aplicações Web da FPF-Etech (https://www.fpf-etech.com/). Onde usamos Django entre outras bibliotecas para aprendermos como funciona uma API. 
