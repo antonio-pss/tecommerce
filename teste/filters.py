@@ -39,12 +39,12 @@ class EmployeeFilter(filters.FilterSet):
 
 class SaleFilter(filters.FilterSet):
     nrf = filters.CharFilter(lookup_expr=STARTS_WITH)
-    id_client = filters.NumberFilter(lookup_expr=STARTS_WITH)
+    id_client = filters.NumberFilter(lookup_expr=EQUALS)
     id_product = filters.NumberFilter(lookup_expr=STARTS_WITH)
     id_employee = filters.NumberFilter(lookup_expr=STARTS_WITH)
-    client = filters.CharFilter(field_name='client__name',lookup_expr=LIKE)
-    product = filters.CharFilter(field_name='product__description',lookup_expr=LIKE)
-    employee = filters.CharFilter(field_name='employee__name',lookup_expr=LIKE)
+    client = filters.CharFilter(field_name='id_client__name',lookup_expr=LIKE)
+    product = filters.CharFilter(field_name='id_product__description',lookup_expr=LIKE)
+    employee = filters.CharFilter(field_name='id_employee__name',lookup_expr=LIKE)
 
     class Meta:
         model = Sale
