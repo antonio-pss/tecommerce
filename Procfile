@@ -1,1 +1,1 @@
-web: gunicorn tecommerce.wsgi
+web: gunicorn tecommerce.wsgi:application
