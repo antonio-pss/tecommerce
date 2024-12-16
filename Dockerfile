@@ -43,3 +43,4 @@ EXPOSE 8000
 
 # Comando para inicializar a aplicação
 CMD ["gunicorn", "tecommerce.wsgi:application", "--bind", "0.0.0.0:8000"]
+
