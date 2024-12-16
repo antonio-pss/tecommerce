@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-g)p4ll%axuy+a-(1cx!^4itk#5b-849xn!y@k!8799o=hzs4^x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -87,7 +87,9 @@ WSGI_APPLICATION = 'tecommerce.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DB_URL')
+        default="postgresql://postgres:zALtdBVnPJOHmaTAPfGbKvsDGTECebAR@autorack.proxy.rlwy.net:18100/railway",
+        conn_max_age=600,
+        ssl_require=not DEBUG
     )
 }
 
